@@ -1,0 +1,17 @@
+
+/* RESET */
+
+@import 'reset.css';
+
+/* TYPOGRAPHY */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Yeseva+One&display=swap');
+
+/* VARIABLES */
+
+/* @import 'variables.css'; */
+  
+/* GLOBAL */
+body {
+    font-family: 'Cinzel', serif;
+}
