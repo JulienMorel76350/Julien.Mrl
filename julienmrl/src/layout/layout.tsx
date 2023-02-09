@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 type LayoutProps = {
   children: React.ReactNode
 }
@@ -14,10 +13,12 @@ export const Layout = ({ children }: LayoutProps) => {
 
 const Wrapper = styled.div`
   display: flex;
-  width: 100vw
+  flex-direction:column;
+  flex:1;
+  background-color: #F5EFE6;
+  height: 100vh;
 `
 const Content = styled.div`
-  height: 100vh;
-  background-color: #F5EFE6;
+
   flex:1;
 `

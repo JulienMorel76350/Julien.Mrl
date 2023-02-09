@@ -1,9 +1,9 @@
 import { Navbar } from '@/components/Navbar'
-export default function Home() {
+export default function Contact() {
   return (
     <>
       <Navbar />
-      <h1>Acceuil</h1>
+      <h1>Contact</h1>
     </>
   )
 }

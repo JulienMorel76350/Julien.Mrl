@@ -1,32 +1,32 @@
-import { useState } from 'react';
-import styled, { css } from "styled-components";
-import { Menu } from './Menu';
-
+import styled from "styled-components";
+import Link from 'next/link';
 export const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState<boolean>(false)
   return (
-    <>
-      <h3 onClick={() => setOpenMenu(!openMenu)}>Menu</h3>
-      <NavContainer openMenu={openMenu}>
-        <h3>Contact</h3>
-        <h1>Julien Mrl</h1>
-      </NavContainer>
-      {openMenu ? <Menu /> : ""}
-    </>
+    <NavContainer>
+      <Link className="link" href={"/contact"}>Contact</Link>
+      <Title><Link href={"/"}>Julien Mrl</Link></Title>
+      <Link className="link" href={"/menu"}>Menu</Link>
+    </NavContainer>
   );
 }
 
 
 const NavContainer = styled.div`
+  display: flex;
   justify-content: space-between;
   margin: 10px 20px;
   align-items: center;
-  h3 {
+  .link {
     font-size: 18px;
+    text-decoration:none;
+    color:black;
   }
-  h1 {
-    font-family: "Yeseva One", cursive;
-    font-size: 32px;
-  }
-  display: ${(props) => (props.openMenu ? "none" : "flex")};
 `;
+const Title = styled.h1`
+  font-family: "Yeseva One", cursive;
+  font-size: 32px;
+  a {
+    text-decoration:none;
+    color: black;
+  }
+`
