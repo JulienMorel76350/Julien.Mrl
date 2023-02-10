@@ -13,12 +13,12 @@ export const Layout = ({ children }: LayoutProps) => {
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction:column;
-  flex:1;
-  background-color: #F5EFE6;
+  flex-direction: column;
+  flex: 1;
+  background-color: #f5efe6;
   height: 100vh;
-`
+  overflow: hidden;
+`;
 const Content = styled.div`
-
   flex:1;
 `
