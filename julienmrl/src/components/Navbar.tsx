@@ -18,15 +18,15 @@ const NavContainer = styled.div`
   align-items: center;
   .link {
     font-size: 18px;
-    text-decoration:none;
-    color:black;
+    text-decoration: none;
+    color: #e8d5cc;
   }
 `;
 const Title = styled.h1`
   font-family: "Yeseva One", cursive;
   font-size: 32px;
   a {
-    text-decoration:none;
-    color: black;
+    text-decoration: none;
+    color: #e8d5cc;
   }
-`
+`;

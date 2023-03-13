@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  background-color: #f5efe6;
+  background-color: #975f39;
   height: 100vh;
   overflow: hidden;
 `;
