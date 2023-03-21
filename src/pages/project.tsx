@@ -50,7 +50,6 @@ export default function Project() {
                     <img src="3fontainebleau.jpg" alt="" />
                 </ImgContainer>
             </Wrap>
-
         </>
     )
 }
