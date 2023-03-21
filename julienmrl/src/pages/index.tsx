@@ -1,20 +1,18 @@
-import { Navbar } from "@/components/Navbar";
-import { motion } from "framer-motion";
-import styled from "styled-components";
+import { Navbar } from '@/components/Navbar'
+import styled from 'styled-components'
 
 const Wrap = styled.div`
   display: flex;
   height: 100%;
   flex-direction: column;
   padding: 30px 60px;
-   
-`;
+`
 const Title = styled.h1`
   font-weight: 700;
   font-size: 106.399px;
   color: #e8d5cc;
-  position:relative;
-  z-index:1;
+  position: relative;
+  z-index: 1;
 `
 const Bar = styled.div`
   width: 800px;
@@ -136,7 +134,7 @@ export default function Home() {
             <Content>
               <div>
                 <ContentTitle>
-                  Etudiant 2015 -2020 Bac S Science de l'ingénieur
+                  Etudiant 2015 -2020 Bac S Science de l&aposingénieur
                 </ContentTitle>
                 <ContentTxt>
                   Compétence acquise : html - Css - Js - sql - php
@@ -178,5 +176,5 @@ export default function Home() {
         </Position>
       </Wrap>
     </>
-  );
+  )
 }

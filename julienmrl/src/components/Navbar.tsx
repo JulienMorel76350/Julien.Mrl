@@ -1,15 +1,20 @@
-import styled from "styled-components";
-import Link from 'next/link';
+import styled from 'styled-components'
+import Link from 'next/link'
 export const Navbar = () => {
   return (
     <NavContainer>
-      <Link className="link" href={"/contact"}>Contact</Link>
-      <Title><Link href={"/"}>Julien Mrl</Link></Title>
-      <Link className="link" href={"/menu"}>Menu</Link>
+      <Link className="link" href={'/contact'}>
+        Contact
+      </Link>
+      <Title>
+        <Link href={'/'}>Julien Mrl</Link>
+      </Title>
+      <Link className="link" href={'/menu'}>
+        Menu
+      </Link>
     </NavContainer>
-  );
+  )
 }
-
 
 const NavContainer = styled.div`
   display: flex;
@@ -21,12 +26,12 @@ const NavContainer = styled.div`
     text-decoration: none;
     color: #e8d5cc;
   }
-`;
+`
 const Title = styled.h1`
-  font-family: "Yeseva One", cursive;
+  font-family: 'Yeseva One', cursive;
   font-size: 32px;
   a {
     text-decoration: none;
     color: #e8d5cc;
   }
-`;
+`
