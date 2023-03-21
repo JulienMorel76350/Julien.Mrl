@@ -55,7 +55,7 @@ const itemContainer = {
 }
 const item = {
   hidden: { y: '50px', opacity: 0 },
-  show: (custom) => ({
+  show: (custom: any) => ({
     y: '0px',
     opacity: 1,
     transition: { duration: 1, delay: custom },
