@@ -57,11 +57,10 @@ const Content = styled.div`
   flex-direction: column;
   padding-left: 20px;
   max-width: 750px;
-  gap: 30px;
+  gap: 45px;
   div {
     display: flex;
     flex-direction: column;
-    gap: 15px;
   }
 `
 const ContentTitle = styled.h3`
