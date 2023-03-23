@@ -5,19 +5,45 @@ const Wrap = styled.div`
   display: flex;
   height: 100%;
   flex-direction: column;
-  padding: 30px 60px;
+  padding: 10px 20px;
+  .lg_svg {display:none}
+  @media only screen and (min-width: 530px) {
+    .xs_svg {display:none}
+    .lg_svg {display:flex}  
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 30px 60px;
+  }
 `
 const Title = styled.h1`
-  font-weight: 700;
-  font-size: 106.399px;
+  font-size: 30px;
   color: #e8d5cc;
+  text-align:center;
   position: relative;
   z-index: 1;
+  font-weight: 700;
+  @media only screen and (min-width: 768px) {
+    font-size: 50px;
+    text-align:left;
+  }
+  @media only screen and (min-width: 992px) {
+    font-size: 70px;
+  }
+  @media only screen and (min-width: 1200px) {
+    font-size: 106.399px;
+  }
+  
 `
-const Bar = styled.div`
-  width: 800px;
+const Bar = styled.div` 
   border: 1.06399px solid #ffffff;
-  margin: 30px 0;
+  margin: 10px 0;
+  @media only screen and (min-width: 768px) {
+    width: calc(100% - 82px);
+    margin: 30px 0;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 800px;
+  }
 `
 const Container = styled.div`
   display: flex;
@@ -40,14 +66,27 @@ const Content = styled.div`
 `
 const ContentTitle = styled.h3`
   font-weight: 700;
-  font-size: 25.5357px;
+  font-size: 14px;
   color: #ffffff;
+  @media only screen and (min-width: 530px) {
+    font-size: 20px;
+  }
+  @media only screen and (min-width: 768px) {
+    font-size: 25.5357px;
+  }
 `
 const ContentTxt = styled.p`
   font-weight: 400;
-  font-size: 25.5357px;
+  font-size: 12px;
   color: #ffffff;
-  line-height: 34px;
+ 
+  @media only screen and (min-width: 530px) {
+    font-size: 18px;
+    line-height: 34px;
+  }
+  @media only screen and (min-width: 768px) {
+    font-size: 25.5357px;
+  }
 `
 const ImgContainer = styled.div`
   position: absolute;
@@ -70,21 +109,10 @@ export default function Home() {
           <Bar></Bar>
           <Container>
             <div>
-              <svg
-                width="22"
-                height="484"
-                viewBox="0 0 22 484"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+              <svg className='lg_svg' width="22"  height="484" viewBox="0 0 22 484"  fill="none" xmlns="http://www.w3.org/2000/svg"
               >
                 <g filter="url(#filter0_d_162_325)">
-                  <rect
-                    x="5"
-                    y="0.25"
-                    width="12"
-                    height="475"
-                    rx="6"
-                    fill="#E8D5CC"
+                  <rect   x="5" y="0.25" width="12" height="475" rx="6" fill="#E8D5CC"
                   />
                 </g>
                 <circle cx="11" cy="465.25" r="10" fill="white" />
@@ -93,40 +121,19 @@ export default function Home() {
                 <circle cx="10.6399" cy="218.862" r="10.6399" fill="white" />
                 <circle cx="10.6399" cy="358.772" r="10.6399" fill="white" />
                 <defs>
-                  <filter
-                    id="filter0_d_162_325"
-                    x="1"
-                    y="0.25"
-                    width="20"
-                    height="483"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                  <filter id="filter0_d_162_325" x="1" y="0.25" width="20" height="483" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"
                   >
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"result="hardAlpha"
                     />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
                     <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    <feColorMatrix type="matrix"values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
                     />
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow_162_325"
+                    <feBlend mode="normal"in2="BackgroundImageFix"result="effect1_dropShadow_162_325"
                     />
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow_162_325"
-                      result="shape"
-                    />
+                    <feBlend mode="normal" in="SourceGraphic"in2="effect1_dropShadow_162_325"result="shape"/>
                   </filter>
                 </defs>
               </svg>
@@ -134,7 +141,7 @@ export default function Home() {
             <Content>
               <div>
                 <ContentTitle>
-                  Etudiant 2015 -2020 Bac S Science de l&aposingénieur
+                  Etudiant 2015 -2020 Bac S Science de l`ingénieur
                 </ContentTitle>
                 <ContentTxt>
                   Compétence acquise : html - Css - Js - sql - php
@@ -171,7 +178,7 @@ export default function Home() {
             </Content>
           </Container>
           <ImgContainer>
-            <div></div>
+            {/* <div></div> */}
           </ImgContainer>
         </Position>
       </Wrap>

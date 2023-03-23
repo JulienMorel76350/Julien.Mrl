@@ -15,26 +15,44 @@ const MenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: 92vh;
   gap: 10px;
   a {
     text-decoration: none;
     color: #000000;
   }
+  
 `
 const MenuItemL = styled.div`
   text-decoration: none;
   display: flex;
-  font-size: 7vw;
+  font-size: 12vw;
   font-weight: 700;
-  padding-left: 120px;
+ 
+  @media only screen and (min-width: 530px) {
+
+    .xs_svg {display:none}
+    .lg_svg {display:flex}  
+  }
+  @media only screen and (min-width: 768px) {
+    padding-left: 120px;
+    font-size: 7vw;
+  }
 `
 const MenuItemR = styled.div`
   display: flex;
   text-decoration: none;
-  font-size: 7vw;
+  font-size: 12vw;
   font-weight: 700;
-  padding-left: 210px;
+  
+  @media only screen and (min-width: 530px) {
+    .xs_svg {display:none}
+    .lg_svg {display:flex}  
+  }
+  @media only screen and (min-width: 768px) {
+    padding-left: 210px;
+    font-size: 7vw;
+  }
 `
 const ItemNumber = styled.p`
   font-size: 3vw;
@@ -92,7 +110,7 @@ export default function Menu() {
             <ItemNumber>02</ItemNumber>A PROPOS
           </MotionMenuItemR>
         </Link>
-        <Link href={'/'}>
+        <Link href={'/project'}>
           <MotionMenuItemL
             variants={item}
             initial="hidden"
