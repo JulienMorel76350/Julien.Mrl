@@ -1,10 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
 export interface IAppProps {
-  FirstSection: String
-  FirstContent: String
-  SecondeSection: String
-  SecondeContent: String
+  FirstSection: string
+  FirstContent: string
+  SecondeSection: string
+  SecondeContent: string
   Padding: any
   id: any
 }

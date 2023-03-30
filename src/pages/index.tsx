@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { Navbar } from '@components/Navbar'
 import { Card } from '@components/Card'
-export interface IAppProps {}
 const ScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -42,7 +41,7 @@ const ScreenContainer = styled.div`
     }
   }
 `
-export default function demo(props: IAppProps) {
+export default function demo() {
   return (
     <ScreenContainer>
       <Navbar />
