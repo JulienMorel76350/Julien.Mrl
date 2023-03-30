@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex: 1;
   height: 100%;
-  background-color: #fff;
+  background-color: #4b7f52;
   flex-direction: column;
   overflow: hidden;
 `
@@ -19,7 +19,7 @@ const MenuContainer = styled.div`
   gap: 10px;
   a {
     text-decoration: none;
-    color: #000000;
+    color: #FFFFFF;
   }
   
 `
@@ -79,8 +79,8 @@ const item = {
     transition: { duration: 1, delay: custom },
   }),
   hover: {
-    backgroundColor: ['#FFFFFF', '#000000'],
-    color: ['#000000', '#FFFFFF'],
+    backgroundColor: ['#4B7F52', '#FFFFFF'],
+    color: ['#FFFFFF', '#4B7F52'],
   },
 }
 export default function Menu() {

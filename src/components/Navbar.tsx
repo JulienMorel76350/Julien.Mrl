@@ -3,14 +3,14 @@ import Link from 'next/link'
 export const Navbar = () => {
   return (
     <NavContainer>
-      <Link className="link" href={'/contact'}>
-        Contact
+      <Link className="link" href={'/menu'}>
+        Menu
       </Link>
       <Title>
         <Link href={'/'}>Julien Mrl</Link>
       </Title>
-      <Link className="link" href={'/menu'}>
-        Menu
+      <Link className="link" href={'/contact'}>
+        Contact
       </Link>
     </NavContainer>
   )
@@ -24,7 +24,7 @@ const NavContainer = styled.div`
   .link {
     font-size: 18px;
     text-decoration: none;
-    color: #e8d5cc;
+    color: #FFFFFF;
   }
 `
 const Title = styled.h1`
@@ -32,6 +32,6 @@ const Title = styled.h1`
   font-size: 32px;
   a {
     text-decoration: none;
-    color: #e8d5cc;
+    color: #b6f9c9;
   }
 `
