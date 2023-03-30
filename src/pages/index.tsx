@@ -1,234 +1,120 @@
-import { Navbar } from '@/components/Navbar'
+import * as React from 'react'
 import styled from 'styled-components'
-
-const Wrap = styled.div`
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  padding: 10px 20px;
-  .lg_svg {display:none}
-  @media only screen and (min-width: 530px) {
-    .xs_svg {display:none}
-    .lg_svg {display:flex}  
-  }
-  @media only screen and (min-width: 768px) {
-    padding: 30px 20px 30px 30pxpx;
-  }
-`
-const Title = styled.h1`
-  font-size: 30px;
-  color: #e8d5cc;
-  text-align:center;
-  position: relative;
-  z-index: 1;
-  font-weight: 700;
-  @media only screen and (min-width: 768px) {
-    font-size: 50px;
-    text-align:left;
-  }
-  @media only screen and (min-width: 992px) {
-    font-size: 70px;
-  }
-  @media only screen and (min-width: 1200px) {
-    font-size: 106.399px;
-  }
-  
-`
-const Bar = styled.div` 
-  border: 1.06399px solid #ffffff;
-  margin: 10px 0;
-  @media only screen and (min-width: 768px) {
-    width: calc(100% - 82px);
-    margin: 30px 0;
-  }
-  @media only screen and (min-width: 1200px) {
-    width: 800px;
-  }
-`
-const Container = styled.div`
-  display: flex;
-`
-const Position = styled.div`
-  position: relative;
-  width: fit-content;
-`
-const Content = styled.div`
+import { Navbar } from '@components/Navbar'
+import { Card } from '@components/Card'
+export interface IAppProps {}
+const ScreenContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  max-width: 750px;
-  gap: 45px;
-  div {
-    display: flex;
-    flex-direction: column;
+  background-color: #4b7f52;
+  position: relative;
+  width: 100%;
+  position: 0;
+  height: 100vh;
+  .TopRight {
+    position: absolute;
+    right: 0;
+    position: -1;
   }
-`
-const ContentTitle = styled.h3`
-  font-weight: 700;
-  font-size: 14px;
-  color: #ffffff;
-  @media only screen and (min-width: 530px) {
-    font-size: 20px;
+  .BotLeft {
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
-  @media only screen and (min-width: 768px) {
-    font-size: 22px;
-  }
-  @media only screen and (min-width: 1200px) {
-    font-size: 25.5357px;
-  }
-`
-const ContentTxt = styled.p`
-  font-weight: 400;
-  font-size: 12px;
-  color: #ffffff;
- 
-  @media only screen and (min-width: 530px) {
-    font-size: 18px;
-    line-height: 34px;
-  }
-  @media only screen and (min-width: 768px) {
-    font-size: 22px;
-  }
-  @media only screen and (min-width: 1200px) {
-    font-size: 25.5357px;
-  }
-`
-const ImgContainer = styled.div`
-  .imgS {
-    display:flex;
-  }
-  .imgXL {
-    display: none;
-  }
-  div {
-    width:100%;
-  }
-  @media only screen and (min-width: 1200px) {
-    right: -233px;
-    top: 150px;
-    .imgXL {
-      display: flex;
+  @media only screen and (max-width: 1280px) {
+    .TopRight > svg {
+      width: 463px;
+      height: 439px;
     }
-    .imgS {
-      display:none;
+    .BotLeft > svg {
+      width: 685px;
+      height: 462px;
     }
   }
-  
+  @media only screen and (min-width: 1450px) {
+    .TopRight > svg {
+      width: 663px;
+      height: 639px;
+    }
+    .BotLeft > svg {
+      width: 885px;
+      height: 662px;
+    }
+  }
 `
-const BoxContainer = styled.div`
-  display:flex;
-  
-`
-
-export default function Home() {
+export default function demo(props: IAppProps) {
   return (
-    <>
+    <ScreenContainer>
       <Navbar />
-      <Wrap>
-        <Position>
-          <Title>DEVELOPPEUR WEB</Title>
-          <Bar></Bar>
-          <BoxContainer>
-            <Container>
-              <div>
-                <svg className='lg_svg' width="22" height="484" viewBox="0 0 22 484" fill="none" xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g filter="url(#filter0_d_162_325)">
-                    <rect x="5" y="0.25" width="12" height="475" rx="6" fill="#E8D5CC"
-                    />
-                  </g>
-                  <circle cx="11" cy="465.25" r="10" fill="white" />
-                  <circle cx="10.6399" cy="10.8318" r="10.6399" fill="white" />
-                  <circle cx="10.6399" cy="115.847" r="10.6399" fill="white" />
-                  <circle cx="10.6399" cy="218.862" r="10.6399" fill="white" />
-                  <circle cx="10.6399" cy="358.772" r="10.6399" fill="white" />
-                  <defs>
-                    <filter id="filter0_d_162_325" x="1" y="0.25" width="20" height="483" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"
-                    >
-                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"
-                      />
-                      <feOffset dy="4" />
-                      <feGaussianBlur stdDeviation="2" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_162_325"
-                      />
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_162_325" result="shape" />
-                    </filter>
-                  </defs>
-                </svg>
-                <svg className='xs_svg' width="13" height="296" viewBox="0 0 13 296" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#filter0_d_162_325)">
-                    <rect x="3.05457" y="0.0354614" width="7.3309" height="290.181" rx="3.66545" fill="#E8D5CC" />
-                  </g>
-                  <circle cx="6.72005" cy="284.108" r="6.10908" fill="white" />
-                  <circle cx="6.49999" cy="6.49999" r="6.49999" fill="white" />
-                  <circle cx="6.49999" cy="70.0455" r="6.49999" fill="white" />
-                  <circle cx="6.49999" cy="132.23" r="6.49999" fill="white" />
-                  <circle cx="6.49999" cy="198.9" r="6.49999" fill="white" />
-                  <defs>
-                    <filter id="filter0_d_162_325" x="0.610932" y="0.0354614" width="12.2182" height="295.069" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                      <feOffset dy="2.44363" />
-                      <feGaussianBlur stdDeviation="1.22182" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_162_325" />
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_162_325" result="shape" />
-                    </filter>
-                  </defs>
-                </svg>
-
-              </div>
-              <Content>
-                <div>
-                  <ContentTitle>
-                    Etudiant 2015 -2020 Bac S Science de l`ingénieur
-                  </ContentTitle>
-                  <ContentTxt>
-                    Compétence acquise : html - Css - Js - sql - php
-                  </ContentTxt>
-                </div>
-                <div>
-                  <ContentTitle>
-                    Etudiant 2020 - 2023 Developpeur Web
-                  </ContentTitle>
-                  <ContentTxt>
-                    Compétence acquise: symfony - react - Ionic
-                  </ContentTxt>
-                </div>
-                <div>
-                  <ContentTitle>
-                    Alternance 2021 - 2022 Chez Courses et moi
-                  </ContentTitle>
-                  <ContentTxt>
-                    Entretien du site web, refonte design Figma, Intégration
-                    Wordpress.
-                  </ContentTxt>
-                </div>
-                <div>
-                  <ContentTitle>
-                    Alternance 2022 - 2023 Chez Mes Parents et Moi
-                  </ContentTitle>
-                  <ContentTxt>
-                    Création du site web & design. Wordpress & Figma
-                  </ContentTxt>
-                </div>
-                <div>
-                  <ContentTitle>Recherche alternance 2023 - 2025 </ContentTitle>
-                </div>
-              </Content>
-            </Container>
-            <ImgContainer>
-              <div className='imgXL'><img src="WebDevXL.png" alt="" /></div>
-              <div className='imgS'><img src="WebDevS.png" alt="" /></div>
-            </ImgContainer>
-          </BoxContainer>
-        </Position>
-      </Wrap>
-    </>
+      <div className="TopRight">
+        <svg
+          width="563"
+          height="539"
+          viewBox="0 0 563 539"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M885.42 536.307C790.378 492.586 695.343 448.703 583.339 421.703C471.554 394.707 343.019 384.596 265.949 332.863C188.879 281.13 163.487 187.939 131.464 103.307C99.4403 18.674 61.0041 -57.3964 22.5679 -133.467L907.988 -115.92L885.42 536.307Z"
+            fill="#8CD790"
+          />
+          <path
+            d="M798.71 269.887C751.189 248.026 703.668 226.165 647.776 212.667C591.883 199.169 527.4 194.029 488.974 168.165C450.33 142.296 437.743 95.703 421.732 53.3867C405.72 11.0703 386.502 -26.9648 367.284 -65L809.994 -56.2267L798.71 269.887Z"
+            fill="#BAF2BB"
+          />
+        </svg>
+      </div>
+      <Card
+        FirstSection="Students 2015 -2020"
+        FirstContent=" Bac S Science de l`ingénieur
+ Informatique et sciences du numérique"
+        SecondeSection="Compétence"
+        SecondeContent=" HTML - CSS - SQL - PHP"
+        Padding="5%"
+        id="01"
+      ></Card>
+      <Card
+        FirstSection="Students 2020 - 2023"
+        FirstContent=" Developpeur Web FULL STACK"
+        SecondeSection="Compétence"
+        SecondeContent=" SYMFONY  - IONIC - VUE - NEXTJS - NUXT"
+        Padding="15%"
+        id="02"
+      ></Card>
+      <Card
+        FirstSection="Alternance Courses et moi 2021 - 2022 "
+        FirstContent=" Refonte design Figma - Intégration Wordpress."
+        SecondeSection="Compétence"
+        SecondeContent=" HTML - CSS - JS - SQL - PHP"
+        Padding="38%"
+        id="03"
+      ></Card>
+      <Card
+        FirstSection="Alternance Mes Parents et Moi 2022 - 2023"
+        FirstContent=" Création du site web - design Wordpress - Figma"
+        SecondeSection="Compétence"
+        SecondeContent=" HTML - CSS - JS - SQL - PHP"
+        Padding="50%"
+        id="04"
+      ></Card>
+      <div className="BotLeft">
+        <svg
+          width="785"
+          height="562"
+          viewBox="0 0 785 562"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M-41.9925 16C32.1864 80.1054 106.305 144.368 202.212 195.703C297.917 246.986 415.207 285.288 469.724 353.343C524.241 421.398 515.841 518.996 516.635 609.606C517.429 700.216 527.214 783.786 537 867.356L-289 654.945L-41.9925 16Z"
+            fill="#8CD790"
+          />
+          <path
+            d="M-52.7291 293.165C-15.6396 325.217 21.4499 357.27 69.302 382.911C117.154 408.553 175.973 427.835 203.129 461.836C230.489 495.89 226.187 544.663 226.585 589.968C226.982 635.273 231.874 677.058 236.767 718.843L-176.233 612.637L-52.7291 293.165Z"
+            fill="#BAF2BB"
+          />
+        </svg>
+      </div>
+    </ScreenContainer>
   )
 }
