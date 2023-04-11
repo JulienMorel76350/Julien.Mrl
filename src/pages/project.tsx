@@ -1,76 +1,66 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Navbar } from '@/components/Navbar'
-import { ProjectRow } from '@/components/ProjectRow'
-const Title = styled.h1`
-  font-weight: 700;
-  font-size: 60px;
-  color: #ffffff;
-  text-align: center;
-`
+import { CardProject } from '@/components/CardProject'
+import { Svg } from "@/components/svg"
 const Wrap = styled.div`
   display: flex;
-  margin: 20px;
-  gap: 20px;
+  justify-content: center;
+  gap: 25px;
 `
-const Content = styled.div`
-  width: 60%;
-  min-width: fit-content;
-`
-const Bar = styled.div`
-  border: 1px solid #ffffff;
-  width: 100%;
-`
-const ImgContainer = styled.div`
+const ContentWrap = styled.div`
   display: flex;
-  width: 40%;
-  img {
-    width: 100%;
-    height: 100%;
+  flex-direction: column;
+  overflow-y: scroll;
+  max-height: 80vh;
+  ::-webkit-scrollbar {
+    width: 3px;
   }
+  ::-webkit-scrollbar-thumb {
+    background: #b6f9c9;
+  }
+  gap: 50px;
 `
+const BG = styled.div`
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  z-index: -10;
+`
+
 export default function Project() {
   return (
     <>
       <Navbar />
-      <Title>Mes Projets</Title>
+      <BG>
+        <Svg></Svg>
+      </BG>
       <Wrap>
-        <Content>
-          <Bar></Bar>
-          <ProjectRow
-            status={true}
-            socity="NEED FOR SCHOOL"
-            title="League of legends"
-            skills="Symfony API Front React axios"
-          />
-          <ProjectRow
-            status={true}
-            socity="NEED FOR SCHOOL"
-            title="Creation of a CRM"
-            skills="Symfony API Front Vue 2"
-          />
-          <ProjectRow
-            status={false}
-            socity="MES PARENTS & MOI"
-            title="WebSite M&M"
-            skills="Wordpress"
-          />
-          <ProjectRow
-            status={false}
-            socity="COURSES & MOI"
-            title="WebSite C&M"
-            skills="Wordpress"
-          />
-          <ProjectRow
-            status={true}
-            socity="COURSES & MOI"
-            title="WebSite C&M"
-            skills="Wordpress"
-          />
-        </Content>
-        <ImgContainer>
-          <img src="3fontainebleau.jpg" alt="" />
-        </ImgContainer>
+        <ContentWrap>
+          <CardProject
+            FirstSection="Mes Parents et moi"
+            FirstContent="Lorem ipsum dolor sitamet, consectetur adipiscing Nulla vel odio libero. Proin consectetur mattis neque sit met convallis. Suspendisse eget orci arcu. Sed condimentum orci non orci viverra, vitae aliquet tortor vulputate.
+            Lorem ipsum dolor sitamet, consectetur adipiscing Nulla vel odio libero. Proin consectetur mattis neque sit met convallis. Suspendisse eget orci arcu. Sed condimentum orci non orci viverra, vitae aliquet tortor vulputate."
+          ></CardProject>
+          <CardProject
+            FirstSection="Mes Parents et moi"
+            FirstContent="Lorem ipsum dolor sitamet, consectetur adipiscing Nulla vel odio libero. Proin consectetur mattis neque sit met convallis. Suspendisse eget orci arcu. Sed condimentum orci non orci viverra, vitae aliquet tortor vulputate."
+          ></CardProject>
+          <CardProject
+            FirstSection="Mes Parents et moi"
+            FirstContent="Lorem ipsum dolor sitamet, consectetur adipiscing Nulla vel odio libero. Proin consectetur mattis neque sit met convallis. Suspendisse eget orci arcu. Sed condimentum orci non orci viverra, vitae aliquet tortor vulputate."
+          ></CardProject>
+          <CardProject
+            FirstSection="Mes Parents et moi"
+            FirstContent="Lorem ipsum dolor sitamet, consectetur adipiscing Nulla vel odio libero. Proin consectetur mattis neque sit met convallis. Suspendisse eget orci arcu. Sed condimentum orci non orci viverra, vitae aliquet tortor vulputate."
+          ></CardProject>
+        </ContentWrap>
+        <ContentWrap>
+          <CardProject
+            FirstSection="Mes Parents et moi"
+            FirstContent="Lorem ipsum dolor sitamet, consectetur adipiscing Nulla vel odio libero. Proin consectetur mattis neque sit met convallis. Suspendisse eget orci arcu. Sed condimentum orci non orci viverra, vitae aliquet tortor vulputate."
+          ></CardProject>
+        </ContentWrap>
       </Wrap>
     </>
   )

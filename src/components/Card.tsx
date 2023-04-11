@@ -38,8 +38,9 @@ const Box = styled.div<{ value: string }>`
   padding: 10px 20px;
   gap: 5px;
   margin-top: 2%;
-  margin-left: ${(props) => props.value};
   position: relative;
+  z-index: 5;
+  margin-left: ${(props) => props.value};
   h1 {
     color: #baf2bb;
     font-weight: 700;
@@ -60,6 +61,7 @@ const Box = styled.div<{ value: string }>`
   }
   @media only screen and (min-width: 1280px) {
     width: 600px;
+
     h1 {
       font-size: 24px;
     }
