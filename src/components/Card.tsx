@@ -33,8 +33,8 @@ const Box = styled.div<{ value: string }>`
   background: #4b7f52;
   border: 2px solid #baf2bb;
   border-radius: 10px;
-  min-width: 520px;
-  width: 530px;
+  min-width: 500px;
+  width: fit-content;
   padding: 10px 20px;
   gap: 5px;
   margin-top: 2%;
@@ -60,13 +60,13 @@ const Box = styled.div<{ value: string }>`
     color: #ffffff;
   }
   @media only screen and (min-width: 1280px) {
-    width: 600px;
+    
 
     h1 {
-      font-size: 24px;
+      font-size: 22px;
     }
     p {
-      font-size: 24px;
+      font-size: 18px;
     }
   }
 `
